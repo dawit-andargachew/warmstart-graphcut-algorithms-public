@@ -1,10 +1,24 @@
-# Warm-Start Graph Cut for Image Segmentation
+<div align="center">
+
+# ✂️ Warm-Start Graph Cut for Image Segmentation
+
+**Fast video segmentation that reuses the previous frame's max-flow solution instead of solving every frame from scratch.**
+
+![Python](https://img.shields.io/badge/Python-3.8--3.11-3776AB?logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue)
+[![Based on paper](https://img.shields.io/badge/Based%20on%20paper-arXiv%3A2303.00837-b31b1b)](https://arxiv.org/abs/2303.00837)
+
+<img src="docs/hero-birdhouse-segmentation.png" alt="Left: the original color video frame of a birdhouse, cropped to the same area as the result. Right: the same frame after segmentation, with a red line tracing the birdhouse's outline" width="720">
+
+*Left: the original frame (cropped to the working area). Right: the result, where the red line is the min cut separating the birdhouse from the background.*
+
+</div>
 
 This repo is a restructured, beginner-friendly version of the implementation for the paper [**"Predictive Flows for Faster Ford-Fulkerson"**](https://arxiv.org/abs/2303.00837) by Yuyan Wang, Siddhartha Banerjee, and David P. Williamson.
 
-**Original Repository**: [wang-yuyan/warmstart-graphcut-algorithms-pulic](https://github.com/wang-yuyan/warmstart-graphcut-algorithms-pulic)
+**Headline result:** on the birdhouse sequence, the warm start is **31% to 42% faster** than solving every frame from scratch at 60×60 and 120×120 (it is slightly slower at 30×30). Measured on a single machine, see [Sample Results](#sample-results).
 
-## Table of Contents
+**Original Repository**: [wang-yuyan/warmstart-graphcut-algorithms-pulic](https://github.com/wang-yuyan/warmstart-graphcut-algorithms-pulic)
 
 - [Background](#background)
 - [What's This About?](#whats-this-about)
