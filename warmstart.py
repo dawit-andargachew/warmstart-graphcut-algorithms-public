@@ -172,7 +172,7 @@ The main function for running the full experiment with an existing set of seeds.
 def Exp(args, trial):
   folder, group, size, algo, loadseed = args.folder, args.group, args.size, args.algo, args.loadseed
   image_dir = folder + '/' + group + '_cropped'
-  image_list = os.listdir(image_dir)
+  image_list = sorted(os.listdir(image_dir))
   V = size * size + 2
   SOURCE, SINK = V - 2, V - 1
 
